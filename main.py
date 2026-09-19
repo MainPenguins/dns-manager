@@ -3,4 +3,4 @@ from app import root_access
 
 if __name__ == "__main__":
 
-    root_access.take_root_access()
+    root_access.take_root_access("1.1.1.1", "1.0.0.1")
