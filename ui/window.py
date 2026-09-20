@@ -44,7 +44,7 @@ class MainWindow(Adw.ApplicationWindow):
         scrolled = Gtk.ScrolledWindow()
         scrolled.set_vexpand(True)
 
-        page = Adw.PreferencesPage()
+        self.page = Adw.PreferencesPage()
 
         default_group = Adw.PreferencesGroup()
         default_group.set_title("Default DNS servers")
@@ -52,7 +52,7 @@ class MainWindow(Adw.ApplicationWindow):
             "Choose a DNS server to use."
         )
 
-        page.add(default_group)
+        self.page.add(default_group)
 
         for dns in DEFAULT_DNS:
             row = self.create_dns_row(dns)
@@ -65,7 +65,7 @@ class MainWindow(Adw.ApplicationWindow):
                 row = self.create_dns_row(dns)
                 self.custom_group.add(row)
 
-            page.add(self.custom_group)
+            self.page.add(self.custom_group)
 
         else:
             self.custom_group = None
@@ -96,9 +96,9 @@ class MainWindow(Adw.ApplicationWindow):
 
         apply_group.add(self.apply_button)
 
-        page.add(apply_group)
+        self.page.add(apply_group)
 
-        scrolled.set_child(page)
+        scrolled.set_child(self.page)
         toolbar_view.set_content(scrolled)
 
         self.set_content(toolbar_view)

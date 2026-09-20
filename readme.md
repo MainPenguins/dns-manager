@@ -2,6 +2,8 @@
 
 A simple and native DNS manager for Linux, built with **Python, GTK4, and Libadwaita**.
 
+The goal of this project is to make changing DNS servers easier through a clean and native GNOME interface.
+
 ### Features
 
 - Built-in DNS providers
@@ -10,6 +12,16 @@ A simple and native DNS manager for Linux, built with **Python, GTK4, and Libadw
 - Persistent DNS configuration
 - `systemd-resolved` support
 - Native GNOME interface
+
+### Preview
+
+#### Light
+
+![DNS Changer Light Preview](preview/light.png)
+
+#### Dark
+
+![DNS Changer Dark Preview](preview/dark.png)
 
 ### Requirements
 
