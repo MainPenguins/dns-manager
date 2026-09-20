@@ -1,6 +1,7 @@
-# This is a simple DNS changer for Linux, writed with Python and LibAdwaita; asami is here baby.
-from app import root_access
+import sys
 
-if __name__ == "__main__":
+from app.application import DNSChanger
 
-    root_access.take_root_access("1.1.1.1", "1.0.0.1")
+
+app = DNSChanger()
+app.run(sys.argv)
